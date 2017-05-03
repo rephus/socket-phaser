@@ -17,6 +17,9 @@ define(['module/Global'], function(Global){
         this.setId = function(_id){
             id = _id; 
         }
+        this.setColor = function(color){
+                sprite.tint = color;
+        }
         this.update = function(x, y){
             sprite.x = x;
             sprite.y = y;

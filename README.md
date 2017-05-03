@@ -12,6 +12,8 @@ That position will be sent as well to all other players connected, which will (i
 
 If a player disconnects, a "disconnect player" message will be broadcasted to all players so they can remove theirs from the game.
 
+![basic](images/basic.png)
+
 ## How to use 
 
 - Run websocket server running on node by doing 

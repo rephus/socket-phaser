@@ -11,10 +11,12 @@ define(['module/Global', 'module/Player'], function (Global, Player) {
     socket.on('update player', function (data) {
 
         if (!Global.players[data.id]) {
-            Global.players[data.id] =  Player.new();
-            Global.players[data.id].setId(data.id);
+            var remotePlayer =  Player.new();
+            remotePlayer.setId(data.id);
+            remotePlayer.setColor(0xff0000);
+            Global.players[data.id] = remotePlayer;
         }
-        //console.log("Updating remote player ",  data);
+        console.log("Updating remote player ",  data);
         Global.players[data.id].update(data.x, data.y);
 
     });
